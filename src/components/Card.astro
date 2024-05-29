@@ -1,0 +1,42 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+	imagePath: string;
+	title: string;
+	body: string;
+}
+
+const { imagePath, title, body } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/*.{jpeg,jpg,png,gif}",
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+	);
+---
+
+<article
+	class="w-11/12 overflow-hidden rounded-lg shadow transition hover:shadow-lg"
+>
+	<Image src={images[imagePath]()} alt="texto descriptivo" />
+
+	<div class="bg-slate-800 p-4 sm:p-6">
+		<a href="#">
+			<h3 class="mt-0.5 text-lg text-white">
+				{title}
+			</h3>
+		</a>
+
+		<p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+			<!-- {body} -->
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+			dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+			sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+			voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+			Molestias explicabo corporis voluptatem?
+		</p>
+	</div>
+</article>

@@ -1,0 +1,87 @@
+---
+import Header from "../components/Header.astro";
+import Contact from "../components/Contact.astro";
+import About from "../components/About.astro";
+import Card from "../components/Card.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body class="relative bg-slate-900">
+		<Header title="Jpira.dev" />
+		<main class="min-h-svh p-5 px-10">
+			<section
+				class="Home lg:grid lg:grid-cols-2 gap-x-20 lg:mt-14 lg:mx-10"
+			>
+				<h1 class="text-3xl lg:text-6xl text-white">
+					HI! I'M <span
+						class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
+						>JULIAN PIRA</span
+					>
+				</h1>
+				<h2 class="text-2xl lg:text-5xl text-white">
+					Software developer
+				</h2>
+				<img
+					class="mt-8 border h-80 row-[1/10] col-start-2"
+					src=""
+					alt=""
+				/>
+				<h2 class="mt-8 text-2xl lg:text-5xl text-white">
+					Come with me
+				</h2>
+				<h2 class="text-2xl lg:text-5xl text-white">
+					to know <span
+						class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
+						>MY WORK</span
+					>
+				</h2>
+				<h2 class="mt-8 text-2xl lg:text-5xl text-white">
+					Don't wait to <span
+						class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
+						>CONTACT ME</span
+					>
+				</h2>
+				<Contact />
+			</section>
+			<section class="About w-3/4">
+				<About />
+			</section>
+			<h1
+				class="my-10 max-w-72 text-3xl bg-gradient-to-r from-sky-600 to-teal-500 text-transparent bg-clip-text font-bold lg:text-5xl lg:mx-10"
+			>
+				PROJECTS
+			</h1>
+			<section
+				class="grid grid-cols-1 gap-4 projects lg:grid-cols-3 lg:mx-10"
+			>
+				<Card
+					imagePath="/src/assets/Maker_Tech.jpg"
+					title="Photoclassify"
+					body="Clasicador de fotos para fotgrafos profesionales"
+				/>
+				<Card
+					imagePath="/src/assets/Maker_Tech.jpg"
+					title="UNAL Extension"
+					body="Provedor del programa de Extension de la Universidad Nacional de Colombia"
+				/>
+				<Card
+					imagePath="/src/assets/Maker_Tech.jpg"
+					title="Marker tech"
+					body="No se que escribir por aca"
+				/>
+				<Card
+					imagePath="/src/assets/Maker_Tech.jpg"
+					title="No tengo otro proyecto"
+					body="No se que escribir por aca"
+				/>
+			</section>
+		</main>
+	</body>
+</html>
