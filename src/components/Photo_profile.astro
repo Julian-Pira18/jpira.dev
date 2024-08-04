@@ -3,22 +3,36 @@ import Logos from "./logos.astro";
 import Image from "astro/components/Image.astro";
 ---
 
-<article>
-    <img src="" alt="" />
-    <ul>
+<article class="mt-8 border h-80 row-[1/10] col-start-2">
+    <img class="border h-80 col-start-" src="" alt="" />
+    <ul class="flex flex-row justify-center gap-10">
         <li>
-            <Logos
-                name_img="eva:github-fill"
-                name_logo="Github"
-                size="text-4xl"
-            />
+            <a
+                href="https://github.com/Julian-Pira18/Julian-Pira18"
+                rel="noreferrer"
+                target="_blank"
+                class="text-gray-700 transition hover:text-gray-700/75"
+            >
+                <Logos
+                    name_logo="eva:github-fill"
+                    name_img="Git hub"
+                    size="text-4xl"
+                />
+            </a>
         </li>
         <li>
-            <Logos
-                name_img="mdi:linkedin"
-                name_logo="Linkedin"
-                size="text-4xl"
-            />
+            <a
+                href="https://www.linkedin.com/in/josejulianpiranaranjo/"
+                rel="noreferrer"
+                target="_blank"
+                class="text-gray-700 transition hover:text-gray-700/75"
+            >
+                <Logos
+                    name_logo="mdi:linkedin"
+                    name_img="Linkedin"
+                    size="text-4xl"
+                />
+            </a>
         </li>
     </ul>
 </article>
