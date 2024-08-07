@@ -31,7 +31,35 @@ import FormContact from "@/components/FormContact.astro";
 			<Projects />
 			<div class="w-full h-10 lg:h-20 mt-14 lg:mt-28"></div>
 		</main>
+		<div class="wave-container"></div>
 		<FormContact />
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.wave-container {
+		height: 10vh;
+		background-color: #071013;
+		position: relative;
+	}
+
+	.wave-container::before {
+		content: "";
+		width: 100%;
+		height: 82px;
+		position: absolute;
+		bottom: -0.3%;
+		left: 0;
+		background-size: auto;
+		background-repeat: repeat no-repeat;
+		background-position: 20vw bottom;
+		background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 84' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 14L33 11C82 8 133 9 200 18C267 28 333 42 400 44C467 46 533 37 600 25C667 14 733 0 800 0C867 0 933 14 1000 18C1067 23 1133 18 1167 16L1200 14V84H1167C1133 84 1067 84 1000 84C933 84 867 84 800 84C733 84 667 84 600 84C533 84 467 84 400 84C333 84 267 84 200 84C133 84 67 84 33 84H0V22.332Z' fill='%230a171c'/></svg>");
+	}
+
+	@media (max-width: 850px) {
+		.wave-container::before {
+			height: 41px;
+		}
+	}
+</style>
