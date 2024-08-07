@@ -10,7 +10,7 @@ interface Props {
 const { name_logo, name_img, size } = Astro.props;
 ---
 
-<div class="h-12 flex shadow-lg items-center justify-center drop-shadow-lg">
+<div class="h-12 flex shadow-lg items-center justify-center">
     <!-- <Icon name={name_logo} class={"text-5xl"} /> -->
     <Icon name={name_logo} class={size} />
     <p class="text-slate-50 ml-2">{name_img}</p>
