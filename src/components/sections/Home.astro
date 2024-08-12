@@ -1,26 +1,26 @@
 ---
 import Contact from "../Contact.astro";
 import PhotoProfile from "../Photo_profile.astro";
+import Logos from "../logos.astro";
 ---
 
 <section
     id="home"
-    class="Home lg:grid lg:grid-cols-2 gap-x-20 lg:mx-10 lg:mt-12"
+    class="Home lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-x-20 lg:mt-12 lg:mx-10"
 >
-    <h1 class="text-3xl lg:text-6xl text-tertiary">
+    <h1 class="text-3xl lg:text-5xl lg:font-semibold text-tertiary col-span-2">
         HI! I'M <a href="#about">
             <span
                 class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
-                >JULIAN PIRA</span
-            ></a
+                >JULIAN
+            </span></a
         >
+        Software developer
     </h1>
-    <h2 class="text-2xl lg:text-5xl text-tertiary">Software developer</h2>
-    <!-- <img class="mt-8 border h-80 row-[1/10] col-start-2" src="" alt="" /> -->
-    <PhotoProfile />
+    <!-- <h2 class="text-2xl lg:text-5xl text-tertiary">Software developer</h2> -->
 
-    <p class="mt-8 text-2xl lg:text-5xl text-tertiary">Come with me</p>
-    <p class="text-2xl lg:text-5xl text-tertiary">
+    <!-- <p class="mt-8 text-2xl lg:text-5xl text-tertiary">Come with me</p> -->
+    <p class="mt-8 text-2xl lg:text-5xl text-tertiary col-span-2">
         to know <a href="#projects">
             <span
                 class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
@@ -28,7 +28,7 @@ import PhotoProfile from "../Photo_profile.astro";
             ></a
         >
     </p>
-    <p class="mt-8 text-2xl lg:text-5xl text-tertiary">
+    <p class="mt-8 text-2xl lg:text-5xl text-tertiary row-start-3 col-span-2">
         Don't wait to <a href="#footer">
             <span
                 class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
@@ -36,6 +36,39 @@ import PhotoProfile from "../Photo_profile.astro";
             >
         </a>
     </p>
-
-    <Contact />
+    <div class="col-start-3 row-start-1 row-span-3 grid items-center">
+        <div>
+            <Contact />
+            <ul class="flex flex-row justify-center gap-10 lg:mt-5">
+                <li>
+                    <a
+                        href="https://github.com/Julian-Pira18"
+                        rel="noreferrer"
+                        target="_blank"
+                        class="text-gray-700 transition hover:text-gray-700/75"
+                    >
+                        <Logos
+                            name_logo="eva:github-fill"
+                            name_img="Git Hub"
+                            size="text-4xl"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/josejulianpiranaranjo/"
+                        rel="noreferrer"
+                        target="_blank"
+                        class="text-gray-700 transition hover:text-gray-700/75"
+                    >
+                        <Logos
+                            name_logo="mdi:linkedin"
+                            name_img="Linkedin"
+                            size="text-4xl"
+                        />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>

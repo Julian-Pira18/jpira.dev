@@ -2,17 +2,29 @@
 import Projects from "@/layouts/Projects.astro";
 import Image from "astro/components/Image.astro";
 import Logos from "@/components/logos.astro";
+import Photo from "src/assets/imgs_projects/PhotoClassify.jpeg";
 ---
 
 <Projects title="Photoclassify">
-    <img src="" alt="" class="w-full h-52" />
-
-    <div class="flex flex-row">
-        <Logos
-            name_img="Golang"
-            name_logo="devicon:go-wordmark"
-            size="text-5xl"
+    <h1 class="text-3xl text-tertiary my-5 font-semibold">PhotoClasssify</h1>
+    <div class="max-2xl:">
+        <Image
+            src={Photo}
+            alt="Imagen del proyecto photoclassify"
+            class="max-w-2xl"
         />
-        <Logos name_img="Python" name_logo="devicon:python" size="text-5xl" />
+    </div>
+    <div>
+        <p class="bg-secundary
+            p-5
+            rounded-b-xl">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Accusantium, dignissimos.
+        </p>
+        <div class="flex flex-row mt-5 gap-5">
+            <Logos name_img="" name_logo="devicon:html5" size="text-xl" />
+            <Logos name_img="" name_logo="devicon:css3" size="text-xl" />
+            <Logos name_img="" name_logo="devicon:python" size="text-xl" />
+        </div>
     </div>
 </Projects>
