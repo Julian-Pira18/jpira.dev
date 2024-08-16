@@ -6,10 +6,12 @@ import Logos from "../logos.astro";
 
 <section
     id="home"
-    class="Home lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:mx-10 h-screen lg:place-items-end"
+    class="Home lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:mx-10 lg:h-screen lg:place-items-end"
 >
     <div class="w-full lg:col-span-2 content-center">
-        <h1 class="text-3xl lg:mt-8 lg:text-5xl text-tertiary lg:col-span-2">
+        <h1
+            class="text-3xl lg:mt-8 lg:text-5xl text-tertiary lg:col-span-2 mt-8"
+        >
             HI! I'M <a href="#about">
                 <span
                     class="bg-gradient-to-r from-sky-600 to-teal-500 bg-clip-text text-transparent font-bold"
@@ -18,15 +20,12 @@ import Logos from "../logos.astro";
             >
             <!-- Software developer -->
         </h1>
-        <h2
-            class="text-3xl lg:text-5xl text-tertiary lg:col-span-2 lg:font-light"
-        >
+        <h2 class="text-3xl lg:text-5xl text-tertiary lg:col-span-2 font-light">
             Software developer
         </h2>
 
-        <!-- <p class="mt-8 text-2xl lg:text-5xl text-tertiary">Come with me</p> -->
         <p
-            class="text-3xl lg:text-xl text-tertiary col-span-2 lg:pt-8 w-2/3 lg:row-start-3"
+            class="text-lg lg:text-xl text-tertiary col-span-2 pt-8 lg:w-2/3 lg:row-start-3"
         >
             Let's explore discover <a href="#projects">
                 <span
@@ -44,7 +43,7 @@ import Logos from "../logos.astro";
             >.
         </p>
     </div>
-    <div class="col-start-3 grid lg:place-self-end w-full">
+    <div class="col-start-3 grid pt-8 lg:place-self-end w-full">
         <Contact />
         <ul class="flex flex-row justify-center gap-10 lg:mt-5">
             <li>
