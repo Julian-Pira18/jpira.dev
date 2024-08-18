@@ -22,16 +22,17 @@ import { Icon } from "astro-icon/components";
         />
         <span
             id="MessageCopy"
-            class="absolute bg-slate-300 opacity-0 group-hover:text-black"
+            class="rounded-md px-2 absolute bg-tertiary opacity-0 group-hover:text-black"
             >Copiado</span
         >
     </div>
-    <div
+    <a
+        href="#FormContact"
         id="Send"
         class="hover:bg-teal-500 hover:text-tertiary rounded-lg bg-tertiary text-center col-span-2 row-start-2 flex justify-center items-center lg:col-span-1"
     >
         <Icon name={"codicon:send"} class={"text-xl lg:text-2xl"} />
-    </div>
+    </a>
     <a
         id="Download"
         target="_blank"
@@ -54,6 +55,6 @@ import { Icon } from "astro-icon/components";
         setTimeout(() => {
             messageCopy?.classList.remove("opacity-100");
             messageCopy?.classList.add("opacity-0");
-        }, 2000);
+        }, 1000);
     });
 </script>
