@@ -18,7 +18,12 @@ const keywebforms = import.meta.env.WEB3FORMS_ACCESS_KEY;
             method="POST"
             class="mb-0 mt-2 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
         >
-            <input type="hidden" name="access_key" value={keywebforms} />
+            <input
+                type="hidden"
+                name="access_key"
+                value={keywebforms}
+                required
+            />
             <div>
                 <label for="email" class="sr-only">Email</label>
 
@@ -28,6 +33,7 @@ const keywebforms = import.meta.env.WEB3FORMS_ACCESS_KEY;
                         type="email"
                         class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                         placeholder="Enter email"
+                        required
                     />
 
                     <span
@@ -60,6 +66,7 @@ const keywebforms = import.meta.env.WEB3FORMS_ACCESS_KEY;
                         type="text"
                         class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                         placeholder="Your Name"
+                        required
                     />
 
                     <span
@@ -78,6 +85,7 @@ const keywebforms = import.meta.env.WEB3FORMS_ACCESS_KEY;
                         type="text"
                         class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm h-20"
                         placeholder="Message"
+                        required
                     />
 
                     <span
